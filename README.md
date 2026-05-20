@@ -53,6 +53,8 @@ engineered and byte-verified against the stock dump:
 | [`docs/text-format.md`](docs/text-format.md) | The UI text codec (`tile = char − $2C`, bit-7 terminator) and the string-draw routines. |
 | [`docs/ram-map.md`](docs/ram-map.md) | Consolidated zero-page / RAM variable map. |
 | [`docs/research-notes.md`](docs/research-notes.md) | Original consolidated findings (banks, vectors, palette, clue blobs). |
+| [`ux/ROADMAP.md`](ux/ROADMAP.md) | **Scene-by-scene game walkthrough** (UX ↔ ROM): the 9 screens, the forks, open tracing targets, and how to extend the guide. Per-screen `arrive.md`/`depart.md` notes live in `ux/Screen NN …/`. |
+| [`ux/ROMHACK-IDEAS.md`](ux/ROMHACK-IDEAS.md) | Tagged author wish-list of hacks (improvement / quality of life / art / mechanical / expansion), each anchored to a ROM location. |
 
 ## Status
 

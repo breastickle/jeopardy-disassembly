@@ -1,9 +1,0 @@
-This screen is shown:
-    When a player rings in from Screen 04
-    When a Plyer inputs a resposne from Screen 06
-    Between jeopardy and double jeopardy to show current lead
-    After all players have finished responding to final jeopardy to reveal final results.
-
-
-Design Notes
-    This is likely the same scene as Screen 03, just repurposed during gameplay. If so, this game would have a tidy 8 scenes, one for each bit of the NES
