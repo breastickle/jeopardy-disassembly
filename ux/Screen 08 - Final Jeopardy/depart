@@ -1,0 +1,9 @@
+This screen departs
+    After "get ready to answer" is displayed after some frames
+
+
+
+Design Notes
+    This screen is similar to the Screen 07 in many ways. It uses a bordered full screen and presents a lot of text information.
+    It is the only other screen with a Press Start prompt like Screen 01
+

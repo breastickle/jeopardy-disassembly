@@ -1,0 +1,4 @@
+This screen departs:
+    After the Answer Timer reaches 0
+    When the in-control player selects "End"
+    With a confirmation sound

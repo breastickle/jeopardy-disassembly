@@ -1,0 +1,9 @@
+This screen is shown:
+    When 1 random clue in jeopardy or 2 random clues in jeopardy are revealed
+    With a special sound effect upon reveal
+    With a timer countdown sound effect
+    Format 1 - Player has over minimum wager amount
+        - Numerical Display, backspace, end buttons
+    Format 2 - Player score below threshold
+        - Choice of (A,B,C,D,E) pre-fab wagers
+        

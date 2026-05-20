@@ -1,0 +1,6 @@
+This departs:
+    After some frames while the buzzing in player plays their excited animation
+    After some frames while the incorrect response player plays their disappointed animation and their score is subtracted from
+    After some frames while the correct response player plays their success animation and their score is added to
+    After some frames while the players look at each other for the current lead between jeopardy and double jeopardy
+    After some frames while the final results are shown at the end of the game

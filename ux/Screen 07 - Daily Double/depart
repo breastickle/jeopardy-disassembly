@@ -1,0 +1,5 @@
+This screen departs
+    When the player selects End
+        With a confirmation sound
+    Some frames after the timer reaches zero
+    

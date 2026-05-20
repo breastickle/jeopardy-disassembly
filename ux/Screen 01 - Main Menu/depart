@@ -1,0 +1,6 @@
+This screen will not depart until:
+    Game is reset
+    Player 1 presses the Start Button after the screen has displayed for some number of frames
+        Player input is ignored until some number of frames
+        Player if input on first possible frame, screen will go black by frame 607 total from boot
+
