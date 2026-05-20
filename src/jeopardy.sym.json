@@ -1,0 +1,70 @@
+{
+  "_about": "Accumulating symbol/label/comment/data file for the Jeopardy! 25th Anniversary (NES) disassembly. Keys are 'BANK:CPUADDR' (hex addr). Feed to tools/disasm6502.py via --syms to get annotated listings. Grows as the ROM is mapped; see docs/ for the analysis behind each name.",
+
+  "labels": {
+    "0:8000": "Dispatcher",
+    "0:8021": "ColdBoot",
+    "0:82B1": "Board_RandomBag",
+    "0:830C": "Bag_DrawSlot",
+    "0:8375": "SlotBitMasks",
+    "0:82A4": "BagBaseOffsets",
+    "0:8901": "StateJumpTable",
+    "0:8DA2": "State_BoardCursor",
+    "0:8DF9": "NamePool",
+    "0:8E5C": "Npc_PickName",
+    "0:8F0C": "Npc_PickFace",
+    "0:9027": "Rng_Advance",
+    "0:9116": "LoadPalette",
+    "0:9139": "PaletteTableA",
+    "0:91F2": "PpuOff",
+    "0:9203": "ClearOAM",
+    "0:920E": "DrawStrings",
+    "0:921E": "DrawString",
+    "0:923A": "DrawBoardLabel",
+    "0:92BE": "NMI",
+    "0:92D7": "PaletteFlush",
+    "0:9733": "Turn_BuzzPoll",
+    "0:9A7F": "DailyDouble_Place",
+    "0:A7F2": "Npc_RollReaction",
+    "0:A80D": "ReactionTimeTable",
+    "0:FF80": "FarCall",
+    "0:FF94": "RESET",
+    "0:FF9D": "DelayLoop",
+    "0:FFE0": "SwitchDelayThunk",
+
+    "1:8000": "Dispatcher",
+    "1:8003": "BankJumpTable",
+    "2:8000": "Dispatcher",
+    "3:8000": "Dispatcher",
+    "3:8003": "BankJumpTable"
+  },
+
+  "comments": {
+    "0:8000": "JMP ($0007): every bank entry; far-call lands here",
+    "0:9027": "RNG: stir-the-pot accumulator ($02/$03/$FE) + frame ctr $01 + live RAM",
+    "0:82B1": "fill the 6 board categories: random bag, no repeats",
+    "0:830C": "draw one slot: (RNG mod $12)+$0F cell, pick unused slot 0-5",
+    "0:8375": "6 single-bit slot masks 80 40 20 10 08 04 ($FC = all used)",
+    "0:8901": "state handlers, indexed by $6E*2",
+    "0:8DF9": "contestant name pool, 6-char records, ',' ($2C)-padded text codec",
+    "0:8E5C": "pick a CPU name from NamePool, re-roll on collision",
+    "0:8F0C": "pick a CPU face/attribute, dedup vs $05D1",
+    "0:A7F2": "roll each CPU buzz delay = ReactionTimeTable[(RNG&3)+difficulty $9B]",
+    "0:A80D": "buzz delays in frames; $FF = 'does not know it' (timer >= $D8 never fires)",
+    "0:9733": "per-frame buzz poll: tick $8F/$90, first to 0 buzzes in",
+    "0:9A7F": "place Daily Double(s) in random board cell(s) $9F/$A0 (0-29), deduped",
+    "0:92BE": "bank-0 vblank NMI: force bank0/NT-A, OAM DMA, palette flush, INC $01",
+    "0:92D7": "copy zero-page palette mirror $44..$63 to PPU $3F00",
+    "0:FF80": "far-call trampoline: A=bank, X=$80xx slot, Y=return bank",
+    "0:FF94": "reset: SEI, latch bank 0, JMP ColdBoot (same in all 4 banks)"
+  },
+
+  "data": [
+    [0, "0x8375", "0x837B"],
+    [0, "0x82A4", "0x82B1"],
+    [0, "0x8901", "0x8923"],
+    [0, "0x9139", "0x9199"],
+    [0, "0x8DF9", "0x8E5C"],
+    [0, "0xA80D", "0xA819"]
+  ]
+}

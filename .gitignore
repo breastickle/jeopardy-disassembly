@@ -1,0 +1,40 @@
+# --- NEVER commit the ROM or any game image (copyrighted game data) ---
+*.nes
+*.nez
+*.unf
+*.unif
+*.fds
+
+# --- Disassembly / assembler build artifacts ---
+*.o
+*.bin
+*.map
+*.dbg
+*.lbl
+*.sym
+build/
+out/
+
+# --- Generated, ROM-derived listings (regenerate via tools/gen_listings.py) ---
+*.lst
+listings/
+
+# --- Emulator / debugger state ---
+*.sav
+*.state
+*.fcs
+*.ldb
+*.mlb
+*.dmp
+
+# --- Python tooling noise ---
+__pycache__/
+*.pyc
+
+# --- OS / editor noise ---
+Thumbs.db
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/
